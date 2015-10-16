@@ -27,7 +27,7 @@ public class Middleware {
            { 
                /******* CONEXIÓN CON LA BBDD *******/
                String userName = "root";
-               String password = "CONTRASEÑA_INTRODUCIDA_AL_INSTALAR_MYSQL";
+               String password = "";
                
                // En la sentencia siguiente, 3306 es el puerto a usar
                // Se debe utilizar el que se indicó en la instalación de MySQL
@@ -99,6 +99,7 @@ public class Middleware {
            }
            catch (Exception e) /******* EXCEPCIÓN EN CASO DE ERROR DE CONEXIÓN *******/
            {
+        	   e.printStackTrace();
                System.err.println ("Cannot connect to database server");
            }
     }
